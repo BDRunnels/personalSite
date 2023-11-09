@@ -8,7 +8,7 @@ import { CgMail } from "react-icons/cg";
 const Footer = () => {
   return (
     <div className="h-20">
-      <footer className=" fixed h-[5%] bottom-0 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-2 border-white text-center md:justify-around z-10 dark:bg-black dark:border-none bg-[#9AC4E4] dark:text-white rounded-md">
+      <footer className=" dark:!rounded-b-none fixed h-[5%] bottom-0 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-2 border-white text-center md:justify-around z-10 dark:bg-black dark:border-none bg-[#9AC4E4] dark:text-white rounded-md">
         {/* <Typography className="font-bold">
               &copy;Bryan Runnels
         </Typography> */}
