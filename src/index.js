@@ -9,8 +9,8 @@ import App from "./App"
 createRoot(document.getElementById('app'))
     .render(
             <ThemeProvider>
-                <HashRouter>
+                <BrowserRouter>
                     <App />
-                </HashRouter>
+                </BrowserRouter>
             </ThemeProvider>
     );

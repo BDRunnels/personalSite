@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer.component";
 
 import "./index.css";
 import Contact from "./components/Contact/Contact.component";
-import IndividualProject from "./components/IndividualProject/IndividualProject.component";
+import NotFound from "./components/NotFound/NotFound.component";
 
 const App = () => {
     
@@ -25,7 +25,7 @@ const App = () => {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/projects" element={<ProjectCard />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/:key" element={<IndividualProject />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         
