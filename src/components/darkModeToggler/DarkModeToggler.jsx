@@ -2,10 +2,26 @@ import { useEffect, useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 const DarkModeToggler = () => {
-    const [darkMode, setDarkMode] = useState(false);
+    // const [darkMode, setDarkMode] = useState(false);
+    // const toggleDarkMode = () => {
+    //     setDarkMode(!darkMode);
+    //     console.log(darkMode);
+    // };
+
+    // useEffect(() => {
+    //     console.log("Dark mode toggled", darkMode);
+    //     document.body.classList.toggle('dark', darkMode);
+    // }, [darkMode]);
+
+    const [darkMode, setDarkMode] = useState(() => {
+        // Retrieve dark mode preference from localStorage (if available)
+        return localStorage.getItem('darkMode') === 'true';
+    });
+
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        console.log(darkMode);
+        const newDarkMode = !darkMode;
+        setDarkMode(newDarkMode);
+        localStorage.setItem('darkMode', newDarkMode); // Save to localStorage
     };
 
     useEffect(() => {
@@ -21,9 +37,6 @@ const DarkModeToggler = () => {
                 checked={darkMode}
                 className=" z-10 fixed left-[14rem] w-10 cursor-pointer rounded-lg p-2"
                 />
-                {/* <span className="dark:hidden"> O </span>
-                <span className="hidden dark:inline"> X </span> */}
-        
         </>
     );
 };

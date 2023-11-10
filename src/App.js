@@ -14,12 +14,6 @@ const App = () => {
     
     return (
         <div className=" dark:bg-black dark:text-white bg-blue-gray-100 min-h-screen">
-            {/* TODO
-            HOME
-            ABOUT ME
-            RESUME
-            FOOTER */}
-        
             <Nav />
             <Routes>
                 <Route exact path="/" element={<Home />} />
@@ -28,7 +22,6 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-        
         </div>
     );
 };

@@ -11,13 +11,20 @@ import {
     Menu,
     MenuHandler,
     MenuList,
-    MenuItem, 
+    MenuItem,
+    List,
+    ListItem,
+    ListItemSuffix,
+    IconButton,
+    Chip,
+    Tooltip, 
 } from "@material-tailwind/react";
 
 import mountainImage from "../../assets/Summer-Dream.jpg";
 import meImage from "../../assets/Me.jpg";
 import mountainBgWhite from "../../assets/mountainOutlineWhite.png";
 import mountainBg from "../../assets/mountainOutline.png";
+import {FcCheckmark} from "react-icons/fc";
 
 const Home = () => {
     const [open1, setOpen1] = useState(0);
@@ -25,6 +32,8 @@ const Home = () => {
     const [open3, setOpen3] = useState(0);
     const [open4, setOpen4] = useState(0);
     const [open5, setOpen5] = useState(0);
+    // Paragraph Visible
+    const [isSecondParagraphVisible, setSecondParagraphVisibility] = useState(false);
  
     const handleOpen1 = (value) => setOpen1(open1 === value ? 0 : value);
     const handleOpen2 = (value) => setOpen2(open2 === value ? 0 : value);
@@ -45,7 +54,7 @@ const Home = () => {
                 >
                 <CardHeader
                     floated={false}
-                    shadow={false}
+                    shadow={true}
                     color="transparent"
                     className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center bg-fixed"
                     style={{ backgroundImage: `url(${mountainImage})`}}
@@ -59,8 +68,8 @@ const Home = () => {
                     className="mb-6 font-bold leading-[1.5]"
                     >
                         <div>DEVELOPER</div>
-                        <div>STUFF</div>
-                        <div>STUFF</div>
+                        <div className="text-xl">JavaScript - Java</div>
+                        <div className="text-xl">React - Express - node </div>
                     </Typography>
                     <Menu>
                         <MenuHandler>
@@ -84,7 +93,7 @@ const Home = () => {
             </Card>
         </div> 
         
-        <div className="relative border-t-2 border-white">
+        <div className="relative border-t-2 border-white dark:border-black">
             <div 
                 className=" hidden dark:bg-fixed dark:bg-no-repeat dark:bg-contain dark:absolute dark:opacity-50  dark:w-[34%] dark:h-[100%] z-0 dark:md:block"
                 style={{backgroundImage: `url(${mountainBgWhite})`}}
@@ -97,30 +106,93 @@ const Home = () => {
 
             />
             
-            <div className=" block md:flex md:flex-col md:flex-wrap md:items-between md:items-center border-t-2 border-white dark:border-black">
+            <div className=" block md:flex md:flex-col md:flex-wrap md:items-between md:items-center">
                 <Accordion open={open1 === 1} className="p-2 lg:w-1/3 md:w-1/2">
                     <AccordionHeader onClick={() => handleOpen1(1)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
                         Who am I?
                     </AccordionHeader>
-                    <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dignissimos qui non a error labore, sunt possimus accusantium accusamus sit?
+                    <AccordionBody className=" text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
+                        <p className="indent-5 p-5"> I am a recent graduate of Colorado State University's Professional Education Bootcamp through Full Stack Academy. This full-time, immersive coding program instilled in me a passion for coding and a burning desire to learn.</p>
+                        <p className="indent-5 p-5">Post graduation, I have delved deep into these frameworks through advanced courses on Udemy to further my knowledge and built several projects. In addition, I began learning Java to capture OOP concepts. </p>
                     </AccordionBody>
                 </Accordion>
 
                 <Accordion open={open2 === 2} className="p-2 lg:w-1/3 md:w-1/2">
                     <AccordionHeader onClick={() => handleOpen2(2)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
-                        What frameworks do I know?
+                        What do I know?
                     </AccordionHeader>
                     <AccordionBody className=" text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt asperiores deleniti perspiciatis mollitia omnis, sapiente ea explicabo aperiam a optio eos rem. Sequi, laborum recusandae sed dolor perferendis natus veritatis porro quisquam saepe officia excepturi veniam provident quo qui atque beatae magni velit! Voluptate beatae illum perspiciatis deserunt impedit? Pariatur?
+                        <List>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Core Web Tech - HTML / CSS
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="I feel good about this!"> */}
+                                        <Chip color="green" value="Proficient" className="cursor-pointer"/>
+                                    {/* </Tooltip> */}
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                JavaScript / React
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="Feeling good about this!"> */}
+                                        <Chip color="green" value="Proficient" className="cursor-pointer"/>
+                                    {/* </Tooltip> */}
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Java
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="Still learning!"> */}
+                                        <Chip color="light-blue" value="Beginner" className="cursor-pointer"/>
+                                    {/* </Tooltip>     */}
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Express
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="Ehhh"> */}
+                                        <Chip color="orange" value="Knowledgable" className="cursor-pointer"/>
+                                    {/* </Tooltip> */}
+                                        
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                node
+                                <ListItemSuffix>
+                                    <Chip color="orange" value="Knowledgable" className="cursor-pointer"/>
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                RDBMS - PostgreSQL / SQL
+                                <ListItemSuffix>
+                                    <Chip color="orange" value="Knowledgable" className="cursor-pointer"/>
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                NoSQL - MongoDB / Firebase / GraphQL
+                                <ListItemSuffix>
+                                    <Chip color="orange" value="Knowledgable" className="cursor-pointer"/>
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Custom CSS - Bootstrap / Tailwind
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="I feel good about this!"> */}
+                                        <Chip color="green" value="Proficient" className="cursor-pointer"/>
+                                    {/* </Tooltip> */}
+                                </ListItemSuffix>
+                            </ListItem>
+                        </List>
                     </AccordionBody>
                 </Accordion>
                 <Accordion open={open3 === 3} className="p-2 lg:w-1/3 md:w-1/2">
                     <AccordionHeader onClick={() => handleOpen3(3)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
-                        What is my experience?
+                        What is my education & experience?
                     </AccordionHeader>
-                    <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique suscipit illum voluptas odit sed eum aperiam perspiciatis vero veritatis velit, sequi ullam quidem rem et id ratione doloremque libero earum pariatur voluptatum? Fuga temporibus, deserunt porro asperiores quo commodi culpa corrupti. Accusantium ea beatae esse magni facere iusto id perspiciatis inventore expedita vero modi ipsa delectus, eos vitae, placeat neque ut ad alias tempora quidem, quisquam porro. Explicabo recusandae animi laudantium ipsum accusamus expedita ipsam maiores, error ullam veritatis fugiat labore aut eligendi deleniti beatae quibusdam asperiores ad sit autem maxime soluta ex? Voluptatem modi nam consectetur? Assumenda, dolorum. Non?
+                    <AccordionBody className="text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
+                        <p className="indent-5 p-5">
+                            I am a graduate of the University of Kansas - B.A. in Communication and Minor in French, in addition to the Colorado State University bootcamp program. For the past 15 years, my professional experience dealt with operations management for a major shipping company, a wine and spirits distributor, and a property management firm.
+                        </p>
                     </AccordionBody>
                 </Accordion>
                 <Accordion open={open4 === 4} className="p-2 lg:w-1/3 md:w-1/2">
@@ -128,17 +200,27 @@ const Home = () => {
                         What do I enjoy?
                     </AccordionHeader>
                     <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis necessitatibus quaerat doloremque nobis, voluptatibus adipisci eveniet mollitia. Natus aliquam quam voluptatibus iste unde, quasi perspiciatis quas adipisci dolore eaque deleniti, officia consequuntur cumque vel.
+                        Besides coding and learning as much as possible...
+                        <ul className="p-5">
+                            <li> Competitive Bowling</li>
+                            <li> Bass Guitar </li>
+                            <li> Weight Training</li>
+                            <li> Hiking</li>
+                            <li> Disc Golf</li>
+                            <li> Family</li>
+                        </ul>
                     </AccordionBody>
                 </Accordion>
-                <Accordion open={open5 === 5} className="p-2 lg:w-1/3 md:w-1/2">
+                {/* <Accordion open={open5 === 5} className="p-2 lg:w-1/3 md:w-1/2">
                     <AccordionHeader onClick={() => handleOpen5(5)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
                         What are my goals?
                     </AccordionHeader>
                     <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis necessitatibus quaerat doloremque nobis, voluptatibus adipisci eveniet mollitia. Natus aliquam quam voluptatibus iste unde, quasi perspiciatis quas adipisci dolore eaque deleniti, officia consequuntur cumque vel.
+                        <p>
+                            To become better every day. Realistically, my goal is to be a part of an organization that mentors
+                        </p>
                     </AccordionBody>
-                </Accordion>
+                </Accordion> */}
             </div>
         </div>
     </>
