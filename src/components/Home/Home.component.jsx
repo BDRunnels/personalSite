@@ -124,7 +124,7 @@ const Home = () => {
                     <AccordionBody className=" text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
                         <List>
                             <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
-                                Core Web Tech - HTML / CSS
+                                Core Web - HTML / CSS
                                 <ListItemSuffix>
                                     {/* <Tooltip content="I feel good about this!"> */}
                                         <Chip color="green" value="Proficient" className="cursor-pointer"/>
@@ -187,7 +187,7 @@ const Home = () => {
                 </Accordion>
                 <Accordion open={open3 === 3} className="p-2 lg:w-1/3 md:w-1/2">
                     <AccordionHeader onClick={() => handleOpen3(3)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
-                        What is my education & experience?
+                        What is my education?
                     </AccordionHeader>
                     <AccordionBody className="text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
                         <p className="indent-5 p-5">
