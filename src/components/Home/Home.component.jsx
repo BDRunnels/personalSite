@@ -43,19 +43,19 @@ const Home = () => {
   return (
     <>
         <div 
-            className=" flex flex-col items-center justify-center bg-cover bg-center bg-fixed h-[41rem]"
+            className=" flex flex-col items-center justify-center bg-cover bg-center bg-fixed h-[75vh]"
             style={{backgroundImage: `url(${mountainImage})`}}
             
         >
             <Card
                 shadow={true}
-                className="h-[20rem] md:h-[35rem] md:w-[28rem] justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
+                className="h-[40vh] mb-20 md:mb-0 md:h-[55vh] md:w-[30vw] justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
                 >
                 <CardHeader
                     floated={false}
                     shadow={true}
                     color="transparent"
-                    className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center bg-fixed"
+                    className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center  bg-fixed"
                     style={{ backgroundImage: `url(${mountainImage})`}}
                 >
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
@@ -64,7 +64,7 @@ const Home = () => {
                     <Typography
                     variant="h2"
                     color="white"
-                    className="mb-6 font-bold leading-[1.5]"
+                    className="mb-6 font-bold leading-[2.0]"
                     >
                         <div>DEVELOPER</div>
                         <div className="text-xl">JavaScript - Java</div>
