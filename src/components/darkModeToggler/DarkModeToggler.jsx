@@ -35,7 +35,7 @@ const DarkModeToggler = () => {
                 onClick={toggleDarkMode} 
                 size={60}
                 checked={darkMode}
-                className=" z-10 fixed left-[14rem] w-10 cursor-pointer rounded-lg p-2"
+                className=" z-10 top-0 fixed left-[14rem] w-10 cursor-pointer rounded-lg p-2"
                 />
         </>
     );
