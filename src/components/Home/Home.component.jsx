@@ -42,13 +42,13 @@ const Home = () => {
   return (
     <>
         <div 
-            className=" flex flex-col items-center justify-center min-h-[200px] bg-cover bg-center bg-fixed"
+            className=" flex flex-col items-center justify-center bg-cover bg-center bg-fixed h-[41rem]"
             style={{backgroundImage: `url(${mountainImage})`}}
             
         >
             <Card
                 shadow={true}
-                className="h-[40rem] w-[90vw] max-w-[28rem] justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
+                className="h-[40rem] w-[28rem] justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
                 >
                 <CardHeader
                     floated={false}
@@ -141,7 +141,7 @@ const Home = () => {
                                 Java
                                 <ListItemSuffix>
                                     {/* <Tooltip content="Still learning!"> */}
-                                        <Chip color="light-blue" value="Beginner" className="cursor-pointer"/>
+                                        <Chip color="light-blue" value="Learning" className="cursor-pointer"/>
                                     {/* </Tooltip>     */}
                                 </ListItemSuffix>
                             </ListItem>
@@ -180,6 +180,14 @@ const Home = () => {
                                     {/* </Tooltip> */}
                                 </ListItemSuffix>
                             </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                git / GitHub
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="I feel good about this!"> */}
+                                        <Chip color="green" value="Proficient" className="cursor-pointer"/>
+                                    {/* </Tooltip> */}
+                                </ListItemSuffix>
+                            </ListItem>
                         </List>
                     </AccordionBody>
                 </Accordion>
@@ -198,8 +206,8 @@ const Home = () => {
                         What do I enjoy?
                     </AccordionHeader>
                     <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
-                        Besides coding and learning as much as possible...
-                        <ul className="p-5">
+                        Besides coding and learning as much as possible, I enjoy...
+                        <ul className="p-5 grid text-left justify-center">
                             <li> Competitive Bowling</li>
                             <li> Bass Guitar </li>
                             <li> Weight Training</li>

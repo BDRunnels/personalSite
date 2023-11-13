@@ -228,18 +228,20 @@ const Nav = () => {
       <Collapse open={openNav}>
         <div>
           {/* <NavList openNav={openNav} setOpenNav={setOpenNav}/> */}
-          <div className="flex w-full flex-nowrap items-center justify-center gap-2 lg:hidden">
+          <div className="flex flex-nowrap gap-2 lg:hidden">
             <List className="">
-              <Link to="/projects">
-                <Button variant="outlined" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-white dark:text-white hover:bg-white text-black border-black border-2" ripple fullWidth onClick={() => setOpenNav(!openNav)}> Projects </Button>
+              <Link to="/projects" className="w-fit">
+                <Button variant="filled" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-2 dark:bg-black dark:text-white hover:bg-light-blue-700 hover:text-white text-black" ripple  onClick={() => setOpenNav(!openNav)}> 
+                  Projects 
+                </Button>
               </Link>
-              <Link to="/">
-                <Button variant="outlined" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-white dark:text-white hover:bg-white text-black border-black border-2" ripple fullWidth onClick={() => setOpenNav(!openNav)}>
+              <Link to="/" className="w-fit">
+                <Button variant="filled" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-2 dark:bg-black dark:text-white hover:bg-light-blue-700 hover:text-white text-black" ripple  onClick={() => setOpenNav(!openNav)}>
                   Home 
                 </Button>
               </Link>  
-              <Link to="/contact">
-                <Button variant="outlined" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-white dark:text-white hover:bg-white text-black border-black border-2" ripple fullWidth onClick={() => setOpenNav(!openNav)}>
+              <Link to="/contact" className="w-fit">
+                <Button variant="filled" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-2 dark:bg-black dark:text-white hover:bg-light-blue-700 hover:text-white text-black" ripple  onClick={() => setOpenNav(!openNav)}>
                   Contact Me
                 </Button>
               </Link>

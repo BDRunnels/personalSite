@@ -23,7 +23,7 @@ const ProjectCard = () => {
     const projects = [
         {
         title: "Vanilla JavaScript Tic-Tac-Toe",
-        description: "Basic Tic-Tac-Toe game coded with JavaScript, HTML, and CSS",
+        description: "Basic Tic-Tac-Toe game learning the foundations of web development.",
         frameworks: "HTML | CSS | JavaScript",
         gitHub: "https://github.com/BDRunnels/Arcade_Project",
         url: "https://vanilla-ttt-game.netlify.app",
