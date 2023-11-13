@@ -20,11 +20,12 @@ import {
     Tooltip, 
 } from "@material-tailwind/react";
 
-import mountainImage from "../../assets/Summer-Dream.jpg";
-import meImage from "../../assets/Me.jpg";
+import mountainImage from "../../assets/Summer-Dream.webp";
+import meImage from "../../assets/Me.png";
 import mountainBgWhite from "../../assets/mountainOutlineWhite.png";
 import mountainBg from "../../assets/mountainOutline.png";
-import {FcCheckmark} from "react-icons/fc";
+
+
 
 const Home = () => {
     const [open1, setOpen1] = useState(0);
