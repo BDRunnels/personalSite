@@ -32,8 +32,6 @@ const Home = () => {
     const [open3, setOpen3] = useState(0);
     const [open4, setOpen4] = useState(0);
     const [open5, setOpen5] = useState(0);
-    // Paragraph Visible
-    const [isSecondParagraphVisible, setSecondParagraphVisibility] = useState(false);
  
     const handleOpen1 = (value) => setOpen1(open1 === value ? 0 : value);
     const handleOpen2 = (value) => setOpen2(open2 === value ? 0 : value);
@@ -44,7 +42,7 @@ const Home = () => {
   return (
     <>
         <div 
-            className=" flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h-[200px] bg-cover bg-center bg-fixed"
+            className=" flex flex-col items-center justify-center min-h-[200px] bg-cover bg-center bg-fixed"
             style={{backgroundImage: `url(${mountainImage})`}}
             
         >
