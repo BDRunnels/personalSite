@@ -226,10 +226,9 @@ const Nav = () => {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <div>
           {/* <NavList openNav={openNav} setOpenNav={setOpenNav}/> */}
-          <div className="flex flex-nowrap gap-2 lg:hidden">
-            <List className="">
+          <div className="gap-2 lg:hidden">
+            <List className="flex w-full flex-row justify-center">
               <Link to="/projects" className="w-fit">
                 <Button variant="filled" size="sm" color="white" className="hover:dark:bg-light-blue-300 hover:dark:text-white dark:border-2 dark:bg-black dark:text-white hover:bg-light-blue-700 hover:text-white text-black" ripple  onClick={() => setOpenNav(!openNav)}> 
                   Projects 
@@ -247,8 +246,7 @@ const Nav = () => {
               </Link>
             </List>
             
-          </div>
-        </div>  
+          </div>  
       </Collapse>
     </Navbar>
   );
