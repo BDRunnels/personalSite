@@ -116,8 +116,8 @@ const Home = () => {
                     </AccordionBody>
                 </Accordion>
 
-                <Accordion open={open2 === 2} className="p-2 lg:w-1/3 md:w-1/2">
-                    <AccordionHeader onClick={() => handleOpen2(2)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
+                <Accordion open={open1 === 2} className="p-2 lg:w-1/3 md:w-1/2">
+                    <AccordionHeader onClick={() => handleOpen1(2)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
                         What do I know?
                     </AccordionHeader>
                     <AccordionBody className=" text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
@@ -192,8 +192,8 @@ const Home = () => {
                         </List>
                     </AccordionBody>
                 </Accordion>
-                <Accordion open={open3 === 3} className="p-2 lg:w-1/3 md:w-1/2">
-                    <AccordionHeader onClick={() => handleOpen3(3)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
+                <Accordion open={open1 === 3} className="p-2 lg:w-1/3 md:w-1/2">
+                    <AccordionHeader onClick={() => handleOpen1(3)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
                         What is my education?
                     </AccordionHeader>
                     <AccordionBody className="text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
@@ -202,8 +202,8 @@ const Home = () => {
                         </p>
                     </AccordionBody>
                 </Accordion>
-                <Accordion open={open4 === 4} className="p-2 lg:w-1/3 md:w-1/2">
-                    <AccordionHeader onClick={() => handleOpen4(4)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
+                <Accordion open={open1 === 4} className="p-2 lg:w-1/3 md:w-1/2">
+                    <AccordionHeader onClick={() => handleOpen1(4)} className="justify-center border-2 border-white bg-[#BC986A] dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black dark:hover:border-2 dark:hover:border-black rounded-lg text-black hover:text-white">
                         What do I enjoy?
                     </AccordionHeader>
                     <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
