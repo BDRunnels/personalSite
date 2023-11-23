@@ -49,7 +49,7 @@ const Home = () => {
         >
             <Card
                 shadow={true}
-                className="h-[40vh] mb-20 md:mb-0 md:h-[55vh] md:w-[30vw] justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
+                className="h-[40vh] mb-20 md:mb-0 md:h-[55vh] md:w-[20vw] md:min-w-fit justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
                 >
                 <CardHeader
                     floated={false}
@@ -64,9 +64,9 @@ const Home = () => {
                     <Typography
                     variant="h2"
                     color="white"
-                    className="mb-6 font-bold leading-[2.0]"
+                    className="mb-5 font-bold leading-[2.0] md:leading-[1.0]"
                     >
-                        <div>DEVELOPER</div>
+                        <div className="mb-2">DEVELOPER</div>
                         <div className="text-xl">JavaScript - Java</div>
                         <div className="text-xl">React - Express - node </div>
                     </Typography>
