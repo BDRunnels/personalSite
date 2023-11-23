@@ -49,7 +49,7 @@ const Home = () => {
         >
             <Card
                 shadow={true}
-                className="h-[40vh] mb-20 md:mb-0 md:h-[55vh] md:w-[20vw] md:min-w-fit justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
+                className="h-[40vh] mb-20 md:mb-0 md:h-[15rem] lg: lg:h-[55vh] md:w-[20vw] md:min-w-fit justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
                 >
                 <CardHeader
                     floated={false}
