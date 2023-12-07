@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <>
         <div 
-            className=" flex flex-col items-center justify-center bg-cover bg-center bg-fixed h-[75vh]"
+            className=" flex flex-col items-center justify-center bg-cover bg-center md:bg-fixed h-[75vh]"
             style={{backgroundImage: `url(${mountainImage})`}}
             
         >
@@ -55,7 +55,7 @@ const Home = () => {
                     floated={false}
                     shadow={true}
                     color="transparent"
-                    className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center  bg-fixed"
+                    className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center  md:bg-fixed blur-sm"
                     style={{ backgroundImage: `url(${mountainImage})`}}
                 >
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />

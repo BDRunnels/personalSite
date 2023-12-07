@@ -1,4 +1,5 @@
 import { Card, CardBody, Button } from "@material-tailwind/react";
+import ContactForm from "../ContactForm/ContactForm.component";
 const Contact = () => {
     return(
             <div className="flex items-center justify-center h-[80vh]">
