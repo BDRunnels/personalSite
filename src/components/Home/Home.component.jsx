@@ -189,6 +189,14 @@ const Home = () => {
                                     {/* </Tooltip> */}
                                 </ListItemSuffix>
                             </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Tableau
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="I feel good about this!"> */}
+                                        <Chip color="light-blue" value="Learning" className="cursor-pointer"/>
+                                    {/* </Tooltip> */}
+                                </ListItemSuffix>
+                            </ListItem>
                         </List>
                     </AccordionBody>
                 </Accordion>
