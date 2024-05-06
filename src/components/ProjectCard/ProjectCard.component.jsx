@@ -178,6 +178,11 @@ const ProjectCard = () => {
                     }
                 </Carousel>
             </div>
+            <div>
+                <section className="text-center mt-[10rem]">
+                    Java Projects
+                </section>
+            </div>
     </div>
   );
 };

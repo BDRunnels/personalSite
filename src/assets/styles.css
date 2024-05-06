@@ -1,0 +1,9 @@
+@keyframes ping {
+  75%, 100% {
+      transform: scale(4);
+      opacity: 0;
+  }
+}
+.animate-ping1 {
+  animation: ping 1s cubic-bezier(.5,.5,.5,.5) reverse;
+}

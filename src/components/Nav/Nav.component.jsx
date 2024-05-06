@@ -27,7 +27,8 @@ import {
   BoltIcon
 } from "@heroicons/react/24/solid";
 import DarkModeToggler from "../darkModeToggler/DarkModeToggler";
- 
+import "../../assets/styles.css";
+
 const navListMenuItems = [
   {
     title: "Tic Tac Toe",
@@ -215,13 +216,13 @@ const Nav = () => {
         <IconButton
           variant="text"
           color="blue-gray"
-          className="lg:hidden dark:text-white"
+          className={`lg:hidden dark:text-white`}
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            <XMarkIcon className="h-6 w-6 text-black dark:text-white animate-ping1" strokeWidth={2} />
           ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            <Bars3Icon className="h-6 w-6 text-black dark:text-white animate-ping1" strokeWidth={2} />
           )}
         </IconButton>
       </div>
