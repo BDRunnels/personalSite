@@ -216,14 +216,53 @@ const Home = () => {
                     </AccordionHeader>
                     <AccordionBody className="text-center text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
                         Besides coding and learning as much as possible, I enjoy...
-                        <ul className="p-5 grid text-left justify-center">
-                            <li> Competitive Bowling</li>
-                            <li> Bass Guitar </li>
-                            <li> Weight Training</li>
-                            <li> Hiking</li>
-                            <li> Disc Golf</li>
-                            <li> Family</li>
-                        </ul>
+                        <List>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Competitive Bowling
+                                <ListItemSuffix>
+                                    <a href="https://youtube.com/shorts/5gwkEPpi-gw?si=VoU52tMayTz6ozpu" target="_blank" rel="noopener noreferrer">
+                                        <Tooltip content="Click to see a perfect game!">
+                                            <Chip color="indigo" value="Mastered" className="cursor-pointer"/>
+                                        </Tooltip>
+                                    </a>
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Bass Guitar
+                                <ListItemSuffix>
+                                    <a href="https://youtu.be/LxErt9-F5y4?si=j1EgjN4Cuhy86BBC" target="_blank" rel="noopener noreferrer">
+                                        <Tooltip content="Click to see the Star Spangled Banner!">
+                                            <Chip color="indigo" value="Mastered" className="cursor-pointer"/>
+                                        </Tooltip>
+                                    </a>
+                                    
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Exercise
+                                <ListItemSuffix>
+                                    <Tooltip content="Weight training is great for you!">
+                                        <Chip color="blue-gray" value="Enjoying" className="cursor-pointer"/>
+                                    </Tooltip>
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Disc Golf
+                                <ListItemSuffix>
+                                    <Tooltip content="Watch out, there's a tree!">
+                                        <Chip color="blue-gray" value="Enjoying" className="cursor-pointer"/>
+                                    </Tooltip>
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Hiking
+                                <ListItemSuffix>
+                                    <Tooltip content="Nature is the best!">
+                                        <Chip color="blue-gray" value="Enjoying" className="cursor-pointer"/>
+                                    </Tooltip>
+                                </ListItemSuffix>
+                            </ListItem>
+                        </List>
                     </AccordionBody>
                 </Accordion>
                 {/* <Accordion open={open5 === 5} className="p-2 lg:w-1/3 md:w-1/2">
