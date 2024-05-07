@@ -43,19 +43,19 @@ const Home = () => {
   return (
     <>
         <div 
-            className=" flex flex-col items-center justify-center bg-cover bg-center md:bg-fixed h-[75vh]"
+            className=" flex flex-col items-center justify-center bg-cover bg-center lg:bg-fixed h-[75vh]"
             style={{backgroundImage: `url(${mountainImage})`}}
             
         >
             <Card
                 shadow={true}
-                className="h-[40vh] mb-20 md:mb-0 md:h-[15rem] lg: lg:h-[55vh] md:w-[20vw] md:min-w-fit justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
+                className="h-[40vh] mb-20 md:mb-0 md:h-[55vh] md:w-[20vw] md:min-w-fit justify-center overflow-hidden text-center dark:shadow-amber-800 shadow-md shadow-white"
                 >
                 <CardHeader
                     floated={false}
                     shadow={true}
                     color="transparent"
-                    className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center  md:bg-fixed blur-sm"
+                    className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center  lg:bg-fixed blur-sm"
                     style={{ backgroundImage: `url(${mountainImage})`}}
                 >
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
@@ -68,7 +68,7 @@ const Home = () => {
                     >
                         <div className="mb-2">DEVELOPER</div>
                         <div className="text-xl">JavaScript - Java</div>
-                        <div className="text-xl">React - Express - node </div>
+                        <div className="text-xl">React - SQL </div>
                     </Typography>
                     <Menu>
                         <MenuHandler>
@@ -139,7 +139,7 @@ const Home = () => {
                                 </ListItemSuffix>
                             </ListItem>
                             <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
-                                Java
+                                Java / JavaFX
                                 <ListItemSuffix>
                                     {/* <Tooltip content="Still learning!"> */}
                                         <Chip color="light-blue" value="Learning" className="cursor-pointer"/>
@@ -162,7 +162,7 @@ const Home = () => {
                                 </ListItemSuffix>
                             </ListItem>
                             <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
-                                RDBMS - PostgreSQL / SQL
+                                RDBMS - PostgreSQL / SQL / MySQL
                                 <ListItemSuffix>
                                     <Chip color="orange" value="Knowledgable" className="cursor-pointer"/>
                                 </ListItemSuffix>

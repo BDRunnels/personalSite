@@ -29,122 +29,122 @@ import {
 import DarkModeToggler from "../darkModeToggler/DarkModeToggler";
 import "../../assets/styles.css";
 
-const navListMenuItems = [
-  {
-    title: "Tic Tac Toe",
-    description: "Vanilla JS game.",
-    icon: HashtagIcon,
-  },
-  {
-    title: "Mission Control",
-    description: "`Launch` rockets to habitable planets.",
-    icon: BoltIcon,
-  },
-  {
-    title: "Gutterballs",
-    description: "E-commerce app selling bowling products.",
-    icon: LifebuoyIcon,
-  },
-  {
-    title: "All Star Wars All The Time",
-    description: "Encyclopedia style app using SWAPI.",
-    icon: SparklesIcon,
-  },
-  {
-    title: "Handwork Clothing",
-    description: "E-commerce app selling clothes.",
-    icon: ShoppingBagIcon,
-  },
-];
+// const navListMenuItems = [
+//   {
+//     title: "Tic Tac Toe",
+//     description: "Vanilla JS game.",
+//     icon: HashtagIcon,
+//   },
+//   {
+//     title: "Mission Control",
+//     description: "`Launch` rockets to habitable planets.",
+//     icon: BoltIcon,
+//   },
+//   {
+//     title: "Gutterballs",
+//     description: "E-commerce app selling bowling products.",
+//     icon: LifebuoyIcon,
+//   },
+//   {
+//     title: "All Star Wars All The Time",
+//     description: "Encyclopedia style app using SWAPI.",
+//     icon: SparklesIcon,
+//   },
+//   {
+//     title: "Handwork Clothing",
+//     description: "E-commerce app selling clothes.",
+//     icon: ShoppingBagIcon,
+//   },
+// ];
  
-function NavListMenu({openNav, setOpenNav}) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <div key={key}>
-      {/* <Link to={`${key}`} key={key} onClick={() => { 
-        setIsMobileMenuOpen(false);
-        if (isMobileMenuOpen) {
-          setOpenNav(!openNav);
-        }
-        }} /> */}
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2">
-            {" "}
-            {createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
-            })}
-          </div>
-          <div className="hover:dark:text-black">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold dark:text-white"
-            >
-              <Link to={`${key}`} 
-                onClick={() => {
-                  setIsMobileMenuOpen(!isMobileMenuOpen)
-                  setOpenNav(!openNav)
-                  }}>{title} </Link>
-            </Typography>
-            <Typography
-              variant="text"
-              className="text-xs !font-medium text-blue-gray-500 dark:text-white"
-            >
-              {description}
-            </Typography>
-          </div>
-        </MenuItem>
-      </div>
-    ),
-  );
+// function NavListMenu({openNav, setOpenNav}) {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+//   const renderItems = navListMenuItems.map(
+//     ({ icon, title, description }, key) => (
+//       <div key={key}>
+//       {/* <Link to={`${key}`} key={key} onClick={() => { 
+//         setIsMobileMenuOpen(false);
+//         if (isMobileMenuOpen) {
+//           setOpenNav(!openNav);
+//         }
+//         }} /> */}
+//         <MenuItem className="flex items-center gap-3 rounded-lg">
+//           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2">
+//             {" "}
+//             {createElement(icon, {
+//               strokeWidth: 2,
+//               className: "h-6 text-gray-900 w-6",
+//             })}
+//           </div>
+//           <div className="hover:dark:text-black">
+//             <Typography
+//               variant="h6"
+//               color="blue-gray"
+//               className="flex items-center text-sm font-bold dark:text-white"
+//             >
+//               <Link to={`${key}`} 
+//                 onClick={() => {
+//                   setIsMobileMenuOpen(!isMobileMenuOpen)
+//                   setOpenNav(!openNav)
+//                   }}>{title} </Link>
+//             </Typography>
+//             <Typography
+//               variant="text"
+//               className="text-xs !font-medium text-blue-gray-500 dark:text-white"
+//             >
+//               {description}
+//             </Typography>
+//           </div>
+//         </MenuItem>
+//       </div>
+//     ),
+//   );
  
-  return (
-    <>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      >
-        <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium dark:text-white">
-            <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-bold text-gray-900 dark:text-white w-[6.5rem]"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              <Link to="/projects"> Projects </Link>
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-          </Typography>
-        </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block dark:bg-black bg-[#9AC4E4]">
-          <ul className="grid grid-rows-1 gap-y-2 outline-none outline-0">
-            {renderItems}
-          </ul>
-        </MenuList>
-      </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
-      </div>
-    </>
-  );
-}
+//   return (
+//     <>
+//       <Menu
+//         open={isMenuOpen}
+//         handler={setIsMenuOpen}
+//         offset={{ mainAxis: 20 }}
+//         placement="bottom"
+//         allowHover={true}
+//       >
+//         <MenuHandler>
+//           <Typography as="div" variant="small" className="font-medium dark:text-white">
+//             <ListItem
+//               className="flex items-center gap-2 py-2 pr-4 font-bold text-gray-900 dark:text-white w-[6.5rem]"
+//               selected={isMenuOpen || isMobileMenuOpen}
+//               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+//             >
+//               <Link to="/projects"> Projects </Link>
+//               <ChevronDownIcon
+//                 strokeWidth={2.5}
+//                 className={`hidden h-3 w-3 transition-transform lg:block ${
+//                   isMenuOpen ? "rotate-180" : ""
+//                 }`}
+//               />
+//               <ChevronDownIcon
+//                 strokeWidth={2.5}
+//                 className={`block h-3 w-3 transition-transform lg:hidden ${
+//                   isMobileMenuOpen ? "rotate-180" : ""
+//                 }`}
+//               />
+//             </ListItem>
+//           </Typography>
+//         </MenuHandler>
+//         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block dark:bg-black bg-[#9AC4E4]">
+//           <ul className="grid grid-rows-1 gap-y-2 outline-none outline-0">
+//             {renderItems}
+//           </ul>
+//         </MenuList>
+//       </Menu>
+//       <div className="block lg:hidden">
+//         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+//       </div>
+//     </>
+//   );
+// }
  
 function NavList({openNav, setOpenNav}) {
   return (
