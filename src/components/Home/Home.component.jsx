@@ -29,16 +29,18 @@ import mountainBg from "../../assets/mountainOutline.png";
 
 const Home = () => {
     const [open1, setOpen1] = useState(0);
-    const [open2, setOpen2] = useState(0);
-    const [open3, setOpen3] = useState(0);
-    const [open4, setOpen4] = useState(0);
-    const [open5, setOpen5] = useState(0);
+        // For use with multiple open accordions
+    // const [open2, setOpen2] = useState(0);
+    // const [open3, setOpen3] = useState(0);
+    // const [open4, setOpen4] = useState(0);
+    // const [open5, setOpen5] = useState(0);
  
     const handleOpen1 = (value) => setOpen1(open1 === value ? 0 : value);
-    const handleOpen2 = (value) => setOpen2(open2 === value ? 0 : value);
-    const handleOpen3 = (value) => setOpen3(open3 === value ? 0 : value);
-    const handleOpen4 = (value) => setOpen4(open4 === value ? 0 : value);
-    const handleOpen5 = (value) => setOpen5(open5 === value ? 0 : value);
+        // For use with multiple open accordions
+    // const handleOpen2 = (value) => setOpen2(open2 === value ? 0 : value);
+    // const handleOpen3 = (value) => setOpen3(open3 === value ? 0 : value);
+    // const handleOpen4 = (value) => setOpen4(open4 === value ? 0 : value);
+    // const handleOpen5 = (value) => setOpen5(open5 === value ? 0 : value);
 
   return (
     <>
@@ -140,6 +142,14 @@ const Home = () => {
                             </ListItem>
                             <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
                                 Java / JavaFX
+                                <ListItemSuffix>
+                                    {/* <Tooltip content="Still learning!"> */}
+                                        <Chip color="light-blue" value="Learning" className="cursor-pointer"/>
+                                    {/* </Tooltip>     */}
+                                </ListItemSuffix>
+                            </ListItem>
+                            <ListItem selected className="font-bold text-black dark:bg-white dark:hover:!bg-white hover:!bg-white/40 cursor-auto">
+                                Python
                                 <ListItemSuffix>
                                     {/* <Tooltip content="Still learning!"> */}
                                         <Chip color="light-blue" value="Learning" className="cursor-pointer"/>

@@ -180,7 +180,10 @@ const ProjectCard = () => {
             </div>
             <div>
                 <section className="text-center mt-[10rem]">
-                    Java Projects
+                    Java Projects - Under Construction!
+                </section>
+                <section className="text-center mt-[10rem]">
+                    Python Projects - Under Construction!
                 </section>
             </div>
     </div>

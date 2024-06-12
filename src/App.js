@@ -17,7 +17,7 @@ const App = () => {
             <Nav />
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route path="/projects" element={<ProjectCard />} />
+                <Route path="/react" element={<ProjectCard />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
