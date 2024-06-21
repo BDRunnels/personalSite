@@ -330,6 +330,7 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
+  Tooltip
 } from "@material-tailwind/react";
 import {
   ChevronDownIcon,
@@ -367,22 +368,29 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const renderItems = navListMenuItems.map(({ icon, title, link }, key) => (
-    <Link to={link}>
-      <MenuItem key={key} className="flex items-center rounded-lg text-black dark:text-white h-8">
-        <div className="rounded-lg">
-          {createElement(icon, {
-            strokeWidth: 2,
-            className: "h-5 dark:bg-black dark:rounded-xl",
-          })}
-        </div>
-        <span className="ml-2 text-sm font-bold dark:text-white hover:dark:text-black"> {title} </span>
-        {/* <Typography variant="h6" color="blue-gray" className="ml-2 text-sm font-bold dark:text-white hover:dark:text-black">
-          <Link to={link}>{title}</Link>
-        </Typography> */}
-      </MenuItem>
-    </Link>  
-  ));
+  const renderItems = navListMenuItems.map(({ icon, title, link }, key) => {
+    const isDisabled = key === 1 || key === 2;
+  
+    return (
+      <Link 
+        to={isDisabled ? "" : link} 
+        key={key} 
+        className={`${isDisabled ? " cursor-not-allowed opacity-50" : ""}`}
+      >
+        <MenuItem className={`flex items-center rounded-lg h-8 ${isDisabled ? "text-black dark:text-white cursor-not-allowed" : "text-black dark:text-white"}`}>
+          <div className="rounded-lg">
+            {createElement(icon, {
+              strokeWidth: 2,
+              className: "h-5 dark:bg-black dark:rounded-xl",
+            })}
+          </div>
+          <span className={`ml-2 text-sm font-bold ${isDisabled ? "text-black dark:text-white cursor-not-allowed" : "text-black dark:text-white hover:dark:text-black"}`}> 
+            {title} 
+          </span>
+        </MenuItem>
+      </Link>
+    );
+  });
 
   return (
     <>
@@ -412,13 +420,13 @@ function NavListMenu() {
               
             </Button>  
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block dark:bg-black ml-20 bg-[#9AC4E4]">
-          <ul className="">
+        <MenuList className="focus:outline-none hidden max-w-screen-xl rounded-xl lg:block dark:bg-black ml-20 bg-[#9AC4E4]">
+          <ul className="focus:outline-none">
             {renderItems}
           </ul>
         </MenuList>
       </Menu>
-      <div className="block lg:hidden rounded-lg dark:bg-black ml-20 bg-[#9AC4E4] border-2">
+      <div className="focus:outline-none block lg:hidden rounded-lg dark:bg-black ml-20 bg-[#9AC4E4] border-2">
         <Collapse open={true}>{renderItems}</Collapse>
       </div>
     </>
@@ -466,7 +474,6 @@ const Nav = () => {
         </div>
         <IconButton
           variant="text"
-          color="blue-gray"
           className={`lg:hidden dark:text-white`}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -478,7 +485,7 @@ const Nav = () => {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <div className="gap-2 lg:hidden">
+        <div className="gap-2 lg:hidden border-none">
           <List className="flex w-full flex-col items-start">
             <Link to="/" className="w-fit">
               <Button variant="text" size="sm" className="mb-1 hover:dark:bg-light-blue-300 hover:dark:text-white  dark:bg-black dark:text-white hover:bg-white text-black" onClick={() => setOpenNav(!openNav)}>
