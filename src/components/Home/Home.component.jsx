@@ -114,7 +114,7 @@ const Home = () => {
                     </AccordionHeader>
                     <AccordionBody className=" text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
                         <p className="indent-5 p-5"> I am a recent graduate of Colorado State University's Professional Education Bootcamp through Full Stack Academy. This full-time, immersive coding program instilled in me a passion for coding and a burning desire to learn.</p>
-                        <p className="indent-5 p-5">Post graduation, I have delved deep into these frameworks through advanced courses on Udemy to further my knowledge and built several projects. In addition, I began learning Java to capture OOP concepts. </p>
+                        <p className="indent-5 p-5">Post graduation, I have delved deep into these frameworks through advanced courses on Udemy to further my knowledge and built several projects. In addition, I began learning Java and Python to capture OOP concepts. </p>
                     </AccordionBody>
                 </Accordion>
 
@@ -216,6 +216,7 @@ const Home = () => {
                     </AccordionHeader>
                     <AccordionBody className="text-black font-extrabold bg-[#9AC4E4] dark:bg-amber-800 transition-colors rounded-lg border border-white">
                         <p className="indent-5 p-5">
+                            Currently, I am enrolled at the University of Kansas - B.S. in Information Technology with an anticipated graduation set for Spring 2026.
                             I am a graduate of the University of Kansas - B.A. in Communication and Minor in French, in addition to the Colorado State University bootcamp program. For the past 15 years, my professional experience dealt with operations management for a major shipping company, a wine and spirits distributor, and a property management firm.
                         </p>
                     </AccordionBody>
