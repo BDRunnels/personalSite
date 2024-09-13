@@ -69,7 +69,7 @@ const Home = () => {
                     className="mb-5 font-bold leading-[2.0] md:leading-[1.0]"
                     >
                         <div className="mb-2">DEVELOPER</div>
-                        <div className="text-xl">JavaScript - Java</div>
+                        <div className="text-xl">Python - Java</div>
                         <div className="text-xl">React - SQL </div>
                     </Typography>
                     <Menu>
